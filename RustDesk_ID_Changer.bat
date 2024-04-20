@@ -14,7 +14,7 @@ goto :eof
 :Main
 cls
 if exist "C:\Program Files\RustDesk\rustdesk.exe" (
-cd "C:\Program Files\RustDesk\"
+cd /d "C:\Program Files\RustDesk\"
 for /f "delims=" %%i in ('rustdesk.exe --get-id ^| more') do set rustdesk_id=%%i
 goto :Run
 ) else (
